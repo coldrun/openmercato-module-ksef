@@ -1,3 +1,5 @@
+/// <reference types="jest" />
+
 import { generateFa2Xml, KsefXmlGenerationError, type SellerInfo } from '../lib/ksefFa2Xml'
 import type { KsefDirectDocument, KsefDirectStoredLineItem } from '../data/entities'
 

@@ -1,3 +1,5 @@
+/// <reference types="jest" />
+
 import { parseReceivedInvoiceXml, type ParsedReceivedInvoice } from '../lib/ksefXmlParser'
 
 // Minimal FA(2) invoice XML based on the structure produced by ksefFa2Xml.ts

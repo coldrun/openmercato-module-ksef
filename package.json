@@ -12,7 +12,7 @@
     "build": "node build.mjs",
     "watch": "node watch.mjs",
     "test": "jest --config jest.config.cjs",
-    "typecheck": "node scripts/typecheck.mjs"
+    "typecheck": "tsc --noEmit"
   },
   "exports": {
     ".": "./dist/index.js",
@@ -36,10 +36,10 @@
   "peerDependencies": {
     "@mikro-orm/decorators": "^7.1.8",
     "@mikro-orm/migrations": "^7.1.8",
-    "@open-mercato/core": ">=0.7.0 <0.8.0",
-    "@open-mercato/queue": ">=0.7.0 <0.8.0",
-    "@open-mercato/shared": ">=0.7.0 <0.8.0",
-    "@open-mercato/ui": ">=0.7.0 <0.8.0",
+    "@open-mercato/core": ">=0.7.0 <0.9.0",
+    "@open-mercato/queue": ">=0.7.0 <0.9.0",
+    "@open-mercato/shared": ">=0.7.0 <0.9.0",
+    "@open-mercato/ui": ">=0.7.0 <0.9.0",
     "@tanstack/react-table": "^9.0.0",
     "awilix": "^13.0.0",
     "lucide-react": "^1.16.0",
@@ -49,22 +49,36 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@mikro-orm/decorators": "^7.1.8",
-    "@mikro-orm/migrations": "^7.1.8",
-    "@open-mercato/core": "0.7.0",
-    "@open-mercato/queue": "0.7.0",
-    "@open-mercato/shared": "0.7.0",
-    "@open-mercato/ui": "0.7.0",
+    "@mikro-orm/decorators": "7.1.14",
+    "@mikro-orm/migrations": "7.1.14",
+    "@open-mercato/core": "0.8.0",
+    "@open-mercato/events": "0.8.0",
+    "@open-mercato/queue": "0.8.0",
+    "@open-mercato/search": "0.8.0",
+    "@open-mercato/shared": "0.8.0",
+    "@open-mercato/ui": "0.8.0",
+    "@radix-ui/react-checkbox": "^1.4.1",
+    "@radix-ui/react-label": "^2.1.17",
+    "@tanstack/react-query": "^5.108.2",
     "@tanstack/react-table": "^9.2.3",
     "@types/jest": "^30.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "awilix": "^13.0.3",
+    "bcryptjs": "^3.0.3",
+    "bullmq": "^6.7.8",
+    "bullmq-otel": "^2.0.1",
+    "class-variance-authority": "^0.7.1",
     "esbuild": "^0.25.0",
     "glob": "^13.0.6",
+    "ioredis": "^6.0.0",
     "jest": "^30.2.0",
+    "language-subtag-registry": "^0.4.2",
     "lucide-react": "^1.16.0",
     "next": "^16.2.6",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "tailwind-merge": "^3.7.1",
     "ts-jest": "^29.4.6",
     "typescript": "^5.9.3",
     "zod": "^4.4.3"
@@ -72,12 +86,17 @@
   "overrides": {
     "@open-mercato/queue": {
       "bullmq-otel": "^2.0.0"
-    }
+    },
+    "@mikro-orm/core": "7.1.14",
+    "@mikro-orm/decorators": "7.1.14",
+    "@mikro-orm/migrations": "7.1.14",
+    "@mikro-orm/postgresql": "7.1.14",
+    "@mikro-orm/sql": "7.1.14"
   },
   "open-mercato": {
     "displayName": "KSeF Direct Integration",
     "ejectable": true,
-    "testedCoreRange": ">=0.7.0 <0.8.0",
+    "testedCoreRange": ">=0.8.0 <0.9.0",
     "upgradeNotesUrl": "https://github.com/FastWhiteCat/openmercato-module-ksef/releases"
   },
   "files": [

@@ -12,7 +12,7 @@ OpenMercato module for direct integration with the Polish National e-Invoice Sys
 
 ## Requirements
 
-- OpenMercato `>=0.7.0 <0.8.0`
+- OpenMercato `>=0.7.0 <0.9.0`
 - The `integrations` module enabled in your app
 - KSeF token and NIP (Tax Identification Number)
 
@@ -33,7 +33,7 @@ yarn workspace <your-app> add @fastwhitecat/integration-ksef-direct
 > Install with `--legacy-peer-deps` to proceed — the module only uses the stable
 > `asValue` API, so it works with awilix 12 and 13 alike.
 
-> `@open-mercato/queue@0.7.0` itself ships an internally inconsistent peer range on
+> `@open-mercato/queue` (`0.7.0` and `0.8.0`) itself ships an internally inconsistent peer range on
 > `bullmq-otel` (`^1.3.0`, while its own `bullmq` peer needs `>=2.0.0`), so a plain
 > `npm install` may report an `ERESOLVE` on `bullmq-otel` even in apps that never
 > touch this module. This module's own `overrides` entry only takes effect when
