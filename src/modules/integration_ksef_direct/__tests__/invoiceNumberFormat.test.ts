@@ -1,3 +1,5 @@
+/// <reference types="jest" />
+
 import { generateKsefInvoiceNumber } from '../lib/invoiceNumberFormat'
 
 describe('generateKsefInvoiceNumber', () => {
